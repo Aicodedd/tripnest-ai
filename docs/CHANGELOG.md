@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-02 (night): Deployed
+- Live on Render free plan: https://tripnest-ai-1rug.onrender.com. Render blueprint now uses one Docker service without a database add-on (seeded SQLite, generated per-start secret). Health, API checks and all 24 browser tests pass against the live site. Hugging Face Space upload worked but the account has no CPU quota, so it was not used.
+
 ## 2026-11-02 (later): Location-first redesign
 
 **Changed**

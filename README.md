@@ -11,6 +11,8 @@ It covers all 36 Indian states and union territories (84 destinations, 271 attra
 
 > **Data honesty.** No verified public source of hourly visitor counts exists for Indian attractions. The crowd model is trained on a clearly labelled **demonstration** history, and every result says so ("ML prediction", "Demonstration data", "Not live"). Capacities are assumptions. The pipeline can be retrained on real counts (see [AI/ML documentation](docs/AI_ML_DOCUMENTATION.md)).
 
+**Live demo:** https://tripnest-ai-1rug.onrender.com (free plan; first load can take about 30 seconds).
+
 ## Model result (demonstration data)
 
 Chronological split: 336 days train, 14 validation, 14 test. On the test fortnight (41,902 hourly rows): **MAPE 9.38%** for the model, against 31.79% for "same hour last week" and 27.45% for a weekday-hour average. This shows the pipeline works, not real-world accuracy.

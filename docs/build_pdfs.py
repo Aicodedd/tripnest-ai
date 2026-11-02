@@ -16,7 +16,7 @@ from pypdf import PdfReader
 DOCS = Path(__file__).resolve().parent
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 NAMES = ["MRD", "PRD", "EPICS", "USER_STORIES", "REQUIREMENT_TRACEABILITY", "SYSTEM_ARCHITECTURE", "DATABASE_SCHEMA",
-         "API_DOCUMENTATION", "AI_ML_DOCUMENTATION", "TEST_PLAN", "TEST_RESULTS", "DEPLOYMENT_GUIDE", "USER_GUIDE", "JUDGE_DEMO_GUIDE"]
+         "API_DOCUMENTATION", "AI_ML_DOCUMENTATION", "TEST_PLAN", "TEST_RESULTS", "DEPLOYMENT_GUIDE", "USER_GUIDE", "JUDGE_DEMO_GUIDE", "SUBMISSION_SUMMARY"]
 FONT = {"MRD": 9.6, "PRD": 9.6}      # points; everything else 10.5
 PAGES = {"MRD": 1, "PRD": 2}         # exact A4 page counts required by the brief
 

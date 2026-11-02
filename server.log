@@ -1,0 +1,27 @@
+INFO:     Started server process [1398]
+INFO:     Waiting for application startup.
+2026-11-02 07:15:17,762 INFO tripnest.model crowd model loaded (trained 2026-11-02T06:12:39)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49253 - "GET / HTTP/1.1" 200 OK
+2026-11-02 07:15:22,372 INFO tripnest rid=73e962db GET /api/health 200 1ms
+INFO:     127.0.0.1:49255 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49258 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49258 - "GET /assets/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49259 - "GET /assets/js/main.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49259 - "GET /assets/js/ui.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49262 - "GET /assets/js/destination.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49260 - "GET /assets/js/landing.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49258 - "GET /assets/js/core.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49261 - "GET /assets/js/explore.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49259 - "GET /assets/js/search.js HTTP/1.1" 200 OK
+2026-11-02 07:15:30,798 INFO tripnest rid=e43ed0db GET /api/locations/all 200 2ms
+INFO:     127.0.0.1:49260 - "GET /api/locations/all HTTP/1.1" 200 OK
+2026-11-02 07:15:30,804 INFO tripnest rid=1c28b7b4 GET /api/categories 200 9ms
+INFO:     127.0.0.1:49262 - "GET /api/categories HTTP/1.1" 200 OK
+2026-11-02 07:15:30,806 INFO tripnest rid=97623539 GET /api/destinations/valparai 200 9ms
+INFO:     127.0.0.1:49261 - "GET /api/destinations/valparai HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1398]

@@ -2,7 +2,7 @@
 
 Version 2.0 · 2 November 2026 · about 6 minutes. Everything shown is implemented and tested; limits are stated up front.
 
-**Before you start.** Run the app locally (`README.md`) or open the deployed URL **if one exists (none yet)**. Keep `/docs` open in a second tab. If using a free-tier host, open the site a few minutes earlier so it is awake.
+**Before you start.** Run the app locally (`README.md`) or open the live URL https://tripnest-ai-1rug.onrender.com. Keep `/docs` open in a second tab. If using a free-tier host, open the site a few minutes earlier so it is awake.
 
 ## 1. The problem (30 s)
 Everyone arrives at the same famous places on the same weekends. Travellers cannot easily ask "how crowded will it be on my date, and where else could I go?" TripNest AI answers those two questions and nothing else, on purpose.
@@ -41,9 +41,9 @@ Open `/api/model` or the home page's "How good are the predictions?":
 | Why show popular places at all? | Travellers expect them; each is labelled with its predicted crowd, and popularity is never part of the recommendation score. |
 | Security? | No accounts or stored personal data; secrets only in environment variables and production refuses to start without them; server-side validation of every parameter; security headers with a content-security policy; non-root container. Not done: penetration test, rate limiting (all endpoints are read-only), dependency vulnerability scan. |
 | Scalability and platform? | Stateless API, PostgreSQL in production, forecasts batched and cached in memory (single instance). Not load-tested. |
-| Is it deployed? | **Not yet.** Docker and Render files are ready and production mode was verified locally; see `DEPLOYMENT_GUIDE.md`. |
+| Is it deployed? | Yes, on Render's free plan: https://tripnest-ai-1rug.onrender.com. It sleeps when idle, so the first load takes about 30 s. It uses a seeded SQLite file, not PostgreSQL. |
 | What did you remove? | Itinerary planner, community, reviews, weather, accounts and admin dashboards, to focus on two features. The code is kept, unmounted. |
 | What next? | Real data feeds (gate, parking, sensors), road-distance routing, weather and events as model inputs, an authority view. |
 
 ## Known limitations to volunteer
-Simulated crowd history · assumed capacities · straight-line distance · photos and map need internet · Chrome-only browser tests · not deployed · no load or accessibility-audit testing.
+Simulated crowd history · assumed capacities · straight-line distance · photos and map need internet · Chrome-only browser tests · no load or accessibility-audit testing.

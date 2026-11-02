@@ -2,13 +2,17 @@
 
 Executed on **2 November 2026** (macOS, Python 3.14.7, pytest 9.2, Playwright 1.58 with Google Chrome, internet available). Everything below was actually run.
 
+## Live deployment (checked 2 November 2026)
+Render free plan, https://tripnest-ai-1rug.onrender.com. Health returned ok with the model loaded; the first request after idle took about 32 s (free plan wakes from sleep); home page 200; `/api/explore` for Coimbatore returned 6 popular places, 6 hidden gems and 27 map points with photographs; security headers present. All 24 browser tests passed against this URL (103 s). The container runs the app with a throw-away SQLite file seeded at start-up (no PostgreSQL), so **PostgreSQL remains untested**.
+
 ## Summary
 | Suite | Command | Passed | Failed | Skipped | Not run |
 |---|---|---|---|---|---|
 | Backend (unit, ML, explore, API) | `cd backend && python -m pytest` | **101** | 0 | 0 | 0 |
 | Browser end to end (real Chrome) | `sh e2e/run.sh` | **24** | 0 | 0 | 0 |
 | Documents | `python docs/build_pdfs.py` | see the build output | | | |
-| Live deployment checklist | `DEPLOYMENT_GUIDE.md` | | | | **Not run: nothing is deployed** |
+| Browser suite against the live site | `E2E_BASE=https://tripnest-ai-1rug.onrender.com python -m pytest e2e` | **24** | 0 | 0 | 0 |
+| Live API checks | health, home page, `/api/explore`, security headers | pass | 0 | 0 | 0 |
 
 Backend per file: `test_catalog_crowd.py` 13, `test_core_features.py` 35, `test_crowd_engine.py` 16, `test_explore.py` 28, `test_map_photos.py` 8, `test_schema_upgrade.py` 1. The browser suite checks console errors, page errors and failing API calls in each test.
 
@@ -48,4 +52,4 @@ Startup refused with empty or short `SECRET_KEY` and with no `DATABASE_URL`; `al
 | Test authoring | Several of my tests were wrong (CSP-blocked string wait, impossible filter combination, timing races, a no-op assertion) | Corrected; the no-op assertion replaced by a real one |
 
 ## Not tested
-Load and performance under many users (single measurements only); PostgreSQL; the Docker image build; the live deployment; browsers other than Chrome; real phones; an accessibility audit with assistive technology; a dependency vulnerability scan; offline use; accuracy on real crowd data.
+Load and performance under many users (single measurements only); PostgreSQL; the Docker image build; browsers other than Chrome; real phones; an accessibility audit with assistive technology; a dependency vulnerability scan; offline use; accuracy on real crowd data.
