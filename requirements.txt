@@ -1,0 +1,16 @@
+# Runtime (pinned; verified on Python 3.14)
+fastapi==0.162.0
+starlette==1.10.0
+uvicorn==0.54.0
+SQLAlchemy==2.1.6
+alembic==1.20.1
+pydantic==2.14.2
+email-validator==2.3.0
+bcrypt==5.0.0
+PyJWT==2.15.1
+httpx==0.28.1
+numpy==2.5.4
+pandas==3.1.0
+scikit-learn==1.9.1
+joblib==1.6.0
+psycopg[binary]==3.3.6

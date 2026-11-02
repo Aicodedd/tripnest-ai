@@ -1,0 +1,107 @@
+{
+  "backend": "scikit-learn HistGradientBoostingRegressor",
+  "target": "log(utilisation + 0.02); utilisation = visitors / assumed carrying capacity",
+  "trained_at": "2026-11-02T06:12:39",
+  "history_end": "2026-11-02",
+  "history_days": 365,
+  "attractions": 271,
+  "data_provenance": "demonstration",
+  "split": {
+    "train_start": "2025-11-02",
+    "train_end": "2026-10-04",
+    "val_start": "2026-10-05",
+    "val_end": "2026-10-18",
+    "test_start": "2026-10-19",
+    "test_end": "2026-11-01"
+  },
+  "rows": {
+    "train": 1008641,
+    "validation": 41902,
+    "test": 41902
+  },
+  "chosen_params": {
+    "learning_rate": 0.1,
+    "max_leaf_nodes": 63,
+    "max_iter": 250,
+    "min_samples_leaf": 40,
+    "l2_regularization": 0.5
+  },
+  "validation_mape_by_candidate": [
+    10.28,
+    9.07
+  ],
+  "test_metrics": {
+    "mape": 9.38,
+    "wape": 8.64,
+    "mae": 54.8,
+    "r2": 0.9857,
+    "n": 41902
+  },
+  "baselines": {
+    "seasonal_naive": {
+      "mape": 31.79,
+      "wape": 28.51,
+      "mae": 181.1,
+      "r2": 0.7296,
+      "n": 41902,
+      "description": "same attraction and hour, 7 days earlier"
+    },
+    "weekday_hour_mean": {
+      "mape": 27.45,
+      "wape": 29.89,
+      "mae": 189.8,
+      "r2": 0.7738,
+      "n": 41902,
+      "description": "mean of train+validation by attraction, weekday, hour"
+    }
+  },
+  "uncertainty": {
+    "method": "log-normal residual spread on the test period (80% band = \u00b11.28\u03c3)",
+    "sigma": 0.0982
+  },
+  "top_features": [
+    {
+      "feature": "category",
+      "importance": 1.4587
+    },
+    {
+      "feature": "hour",
+      "importance": 1.2827
+    },
+    {
+      "feature": "popularity",
+      "importance": 0.1387
+    },
+    {
+      "feature": "dow",
+      "importance": 0.0797
+    },
+    {
+      "feature": "is_holiday",
+      "importance": 0.0486
+    },
+    {
+      "feature": "open_frac",
+      "importance": 0.0473
+    }
+  ],
+  "features": [
+    "category",
+    "climate",
+    "hour",
+    "dow",
+    "is_weekend",
+    "is_holiday",
+    "festival",
+    "month",
+    "in_season",
+    "rain",
+    "popularity",
+    "log_capacity",
+    "open_frac",
+    "covered",
+    "sensitive"
+  ],
+  "note": "Measured on DEMONSTRATION (simulated) data: shows the pipeline works, not real-world accuracy.",
+  "seconds": 36.5
+}

@@ -1,0 +1,23 @@
+# secrets
+.env
+.env.*
+!.env.example
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+# local data and generated artefacts
+backend/*.db
+*.sqlite3
+# node / browser tests
+node_modules/
+e2e/node_modules/
+e2e/test-results/
+e2e/playwright-report/
+# build and OS
+dist/
+submission/
+.DS_Store
+.taste-skill/
