@@ -41,7 +41,7 @@ Source paths are under `frontend/assets/js/` (front end) and `backend/app/` (bac
 | STORY-021 | `main.js` | none | none | `e2e` |
 | STORY-022 | `backend/tests`, `e2e` | none | none | all (`TEST_RESULTS.md`) |
 | STORY-023 | `config.py`, `main.py` | `/api/health` | none | `test_core_features.py` |
-| STORY-024 | `Dockerfile`, `render.yaml` | `/api/health` | PostgreSQL (production) | none yet: **not deployed** |
+| STORY-024 | `Dockerfile`, `render.yaml` | `/api/health` | PostgreSQL (production) | live check 2 Nov 2026: health, API and 24 browser tests against https://tripnest-ai-1rug.onrender.com |
 | STORY-025 | `docs/*` | none | none | `docs/build_pdfs.py` (page counts, text, test references) |
 
 ## 3. Non-functional, AI and security requirements

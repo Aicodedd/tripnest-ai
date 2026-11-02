@@ -2,7 +2,7 @@
 
 Version 1.0 · 2 November 2026.
 
-> **Status: NOT DEPLOYED.** The Docker and Render files are prepared and the production-mode start was verified locally, but nothing has been deployed because it needs your hosting account. There is **no public URL** yet. Do not present one until the live checks in section 5 pass.
+> **Status: DEPLOYED** on Render's free plan at https://tripnest-ai-1rug.onrender.com, checked on 2 November 2026 (health, API, security headers and all 24 browser tests). The Render blueprint uses one Docker service built from `deploy/huggingface/Dockerfile` with a seeded SQLite file and a per-start generated secret, so there is no database add-on and PostgreSQL remains untested. The free plan sleeps when idle; the first load takes about 30 s. The sections below describe the original PostgreSQL route and the checklist.
 
 ## 1. What runs in production
 

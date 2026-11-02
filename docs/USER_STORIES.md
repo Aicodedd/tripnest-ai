@@ -94,7 +94,7 @@ P1. **Evidence:** `TEST_RESULTS.md` (101 backend, 24 browser). **Status:** Done.
 P1. SEC-001 to SEC-003. **Tests:** `test_health_reports_database_and_model`, `test_security_headers_present`, `test_removed_modules_are_not_exposed`, `test_recommendation_input_validation`. **Status:** Done.
 
 ### STORY-024: Public deployment
-P1. **Status:** **Not done.** Docker and Render files are prepared; nothing is deployed and there is no public URL.
+P1. **Status:** **Done.** Live on Render free plan at https://tripnest-ai-1rug.onrender.com, verified 2 November 2026 (health, API, 24 browser tests).
 
 ### STORY-025: Documentation
 P1. **Status:** Done (see `IMPLEMENTATION_STATUS.md`).
